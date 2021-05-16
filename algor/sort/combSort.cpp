@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 void swap(int &a, int&b){
@@ -9,10 +10,10 @@ void swap(int &a, int&b){
 
 void comb_sort(int* arr,int n){
     int gap = n;
-    int shrink = 1.3;
+    float shrink = 1.3;
     while(gap>0){
-        if(gap=gap/shrink) gap--;
-        else gap/=shrink;
+        if(gap==round(gap/shrink)) gap--;
+        else gap=round(gap/shrink);
         for(int i=gap;i<n;i++){
             if(arr[i]<arr[i-gap]) 
                 swap(arr[i],arr[i-gap]);
