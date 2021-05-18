@@ -13,18 +13,15 @@ void cocktail_sort(int* arr,int n){
     int i=0;
     while(left!=right){
         i+=step;
-        //cout<<"i="<<i<<"\t";
         if(arr[i]<arr[i-1]) swap(arr[i],arr[i-1]);
         if(i==end){
             if(step==1){
                 right--;
                 end=left+1;
-                //cout<<"end="<<end<<endl;
             }
             if(step==-1){
                 left++;
                 end=right;
-                //cout<<"end="<<end<<endl;
             }
             step*=-1;
         }
