@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <time.h>
 #include <algorithm>
-#include<queue>
+#include <queue>
 using namespace std;
 
 int get_max_bit(int a){
